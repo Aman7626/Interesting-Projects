@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very Important Question</title>
+    <style>
+        body {
+            background-color: lightskyblue;
+        }
+
+        .window {
+            border: 2px solid black;
+            height: 150px;
+            width: 250px;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+            padding: 50px;
+            background-color: lightgray;
+        }
+
+        button {
+            width: 100px;
+            margin-top: 50px;
+            font-size: 35px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 5px black;
+        }
+
+        #b2 {
+            margin-left: 40px;
+            color: red;
+        }
+
+        #b1 {
+            color: green;
+        }
+
+        #b1:hover {
+            background-color: lightgreen;
+        }
+
+        #b2:hover {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="win" class="window">
+        <h1>Are you a gay?</h1>
+        <button id="b1" onclick="yes()">Yes</button>
+        <button id="b2" onmousemove="move()">No</button>
+    </div>
+    <script>
+
+        let b = 0;
+        let move = () => {
+            b++;
+            b2.style.position = "absolute";
+            if (b == 1) {
+                b2.style.top = "5%";
+                b2.style.right = "5%";
+            }
+            else if (b == 2) {
+                b2.style.top = "10%";
+                b2.style.right = "50%";
+            }
+            else if (b == 3) {
+                b2.style.top = "80%";
+                b2.style.right = "70%";
+            }
+            else if (b == 4) {
+                b2.style.top = "85%";
+                b2.style.right = "10%";
+            }
+            else if (b == 5) {
+                b2.style.top = "50%";
+                b2.style.right = "80%";
+            }
+            else if (b == 6) {
+                b2.style.top = "5%";
+                b2.style.right = "20%";
+            }
+            else {
+                b2.style.top = "85%";
+                b2.style.right = "15%";
+                b = 0;
+            }
+        }
+        let yes = () => {
+            win.innerHTML = `
+        <h1>I knew it :)</h1>
+    `;
+            win.style.height = "80px";
+        };
+
+    </script>
+</body>
+
+</html>
